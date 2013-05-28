@@ -1,9 +1,39 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-</head>
-<body>
+    <head>
+        <title>Server Listing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'custom/css/custom.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar main-navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="#">Server Listing</a>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Servers</a></li>
+                        <li><a href="#">Providers</a></li>
+                        <li><a href="#">Location</a></li>
+                    </ul>
+                </div>
+            </div>
+            {% block content %}
 
-</body>
+            {% endblock %}
+            <hr />
+            <div class="row-fluid">
+                <div class="span6">
+                    Licence pending.
+                </div>
+                <div class="span6">
+                    <p class="pull-right">The server listing platform.</p>
+                </div>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    </body>
 </html>
